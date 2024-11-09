@@ -1,0 +1,45 @@
+---
+title: "Trabajo práctico"
+subtitle: "XS-1130 Principios de Inferencia Estadística"
+author: 
+  - "Diego Alberto Vega Víquez"
+date: today
+bibliography: references.bib
+output:
+  pdf:
+    documentclass: scrreprt
+    keep-tex: true
+    colorlinks: true  # Cambiado a true para habilitar los enlaces de color
+    linkcolor: black  # Cambia el color de los enlaces
+    citecolor: black  # Cambia el color de las citas
+    urlcolor: black   # Cambia el color de los enlaces URL
+execute:
+  freeze: auto
+  cache: true
+format: 
+  pdf: default
+lang: es
+link-external-newwindow: true
+---
+
+# Índice
+
+- [Metodología](#metodologia)
+- [Resultados](#resultados)
+- [Conclusiones](#conclusiones)
+
+# Introducción
+
+Contenido de la introducción...
+
+# Metodología {#metodologia}
+
+Contenido de la metodología...
+
+# Resultados {#resultados}
+
+Contenido de los resultados...
+
+# Conclusiones {#conclusiones}
+
+Contenido de las conclusiones...
