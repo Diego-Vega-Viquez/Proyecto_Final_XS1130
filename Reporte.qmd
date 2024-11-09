@@ -2,7 +2,9 @@
 title: "Trabajo práctico"
 subtitle: "XS-1130 Principios de Inferencia Estadística"
 author: 
-  - "Diego Alberto Vega Víquez"
+  - "Diego Vega"
+  - "Catalína Monge"
+  - "Diego Obando Fonseca"
 date: today
 bibliography: references.bib
 output:

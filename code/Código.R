@@ -8,7 +8,7 @@ library(tidyverse)
 #####
 # CARGA DATOS
 #####
-ACTUALIDADES2022 <- as.data.frame(read_dta("data/ACTUALIDADES2022.dta"))
+ACTUALIDADES2022 <- as.data.frame(read_dta("https://raw.githubusercontent.com/Diego-Vega-Viquez/Proyecto_Final_XS1130/main/data/ACTUALIDADES2022.dta"))
 
 ##########################
 # Selección de variables #
@@ -23,6 +23,9 @@ datos <- ACTUALIDADES2022 %>% select(SbjNum, Date, Duration,
 #####################
 
 datos_limpios <- datos
+
+# Elimina las variables CS13
+datos_limpios <- datos_limpios %>% select(-c(CS13,CS13_NOMBRE))
 
 # Elimina a las personas ecuestadas que no saben quien es Rodrigo Chavez
 datos_limpios <- datos_limpios %>% filter(datos_limpios$RC1 != 6) 
@@ -138,6 +141,21 @@ labels <- as.data.frame(tibble(Código = names(datos),
                                                   ) # Extrae el label o NA si no existe 
                                )
                         )
+############################
+# Descripción de los datos #
+############################
+
+# Muestra cómo se ven los datos
+
+glimpse(head(muestra))
+
+# Muestra cuantas variables hay de cada tipo de dato (cuali & cuanti)
+tipos <- c()
+for (word in colnames(muestra)) {
+  tipos <- c(tipos,class(muestra[[word]]))
+}
+summary(as.factor(tipos))
+
 
 
 
